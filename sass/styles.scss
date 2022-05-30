@@ -1,0 +1,188 @@
+//Variables importer du ficher _variables
+@use "variables" as v;
+@use "mixinx" as m;
+// @use "reset" as r;
+
+
+.navigation {
+    background-color: #333;
+    display: block;
+
+
+    ul {
+        list-style: none;
+
+        @media screen and (max-width: v.$xs-breakpoint) {
+
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+        }
+
+        li {
+            margin-right: 3rem;
+
+            @media screen and (max-width: v.$xs-breakpoint) {
+
+                margin-right: 2rem;
+            }
+
+            a {
+                text-decoration: none;
+                float: right;
+                margin: 1.5rem 1rem 0 0;
+                font-size: 1.5rem;
+                color: white;
+
+                @media screen and (max-width: v.$sm-breakpoint) {
+                    color: white;
+                    font-size: 1rem;
+
+                }
+
+            }
+
+            a:hover {
+                color: whitesmoke;
+                text-decoration: underline;
+            }
+
+            img {
+                height: 5vh;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+        }
+    }
+}
+
+.topSection {
+    background-image: url("/img/Lille-Seminaires.jpg");
+    size: cover;
+    background-position: center;
+    padding: 8rem;
+    position: relative;
+
+    h2 {
+        color: white;
+        background-color: rgba(250, 235, 215, 0.769);
+        padding: 1.2rem;
+        width: fit-content;
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+        margin: auto;
+    }
+}
+
+.formulaire {
+    background-color: #333;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 1rem 2rem;
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .pos {
+            margin: 1rem;
+
+
+            @media screen and (max-width: v.$lg-breakpoint) {
+                width: 40%;
+                text-align: center;
+            }
+
+            @media screen and (max-width: v.$sm-breakpoint) {
+                width: 100%;
+                text-align: center;
+            }
+
+
+            label {
+                color: aliceblue;
+                display: block;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                text-align: center;
+
+
+            }
+
+            .itaille {
+                @media screen and (max-width: v.$sm-breakpoint) {
+                    width: 80%;
+
+                }
+
+            }
+
+        }
+    }
+
+    button:hover {
+        background-color: orange;
+        border-radius: 10%;
+    }
+
+    .save {
+        margin-top: 1rem;
+        margin-left: 2rem;
+
+        @media screen and (max-width: v.$lg-breakpoint) {
+
+            margin-right: 2rem;
+            margin-top: 1rem;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .radio {
+        display: flex;
+        text-align: center;
+        align-items: flex-end;
+        justify-content: center;
+        width: 10%;
+
+    }
+}
+
+
+
+
+
+
+.bottomSection {
+    background-image: url("/img/Lille-Hall.jpg");
+    size: cover;
+    background-position: bottom;
+    padding: 8rem;
+    position: relative;
+    align-items: center;
+
+    h2 {
+        color: white;
+        background-color: rgba(250, 235, 215, 0.769);
+        padding: 1.2rem;
+        width: fit-content;
+        font-size: 3rem;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+    }
+}
